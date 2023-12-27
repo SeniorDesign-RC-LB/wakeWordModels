@@ -1,0 +1,6 @@
+Evaluation License
+
+All model files provided with this lincense may only be used 
+for testing and evaluation purposes. The license if valid for 
+thirty (30) days beginning with the download date of the model
+files.

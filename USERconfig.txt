@@ -1,18 +1,28 @@
 {
   "listener": {
     "wake_word_upload": {
-      "disable": False
-    }
-    "wake_word": hey_ARCKK
-  }
+      "disable": false
+    },
+    "wake_word": "hey_arckk"
+  },
   "hotwords": {
-    "hey_arckk_openWakeWord": {
-      "module": "ovos-ww-plugin-openwakeword"
-      "model": "/home/ovos/wakeWordModels/openWakeWord/hey_ARCKK.tflite"
-      "expected_duration": 3
-      "trigger_level": 3
-      "sensitivity": 1
-      "listen": True
-    }
+    "hey_arckk": {
+      "module": "ovos-ww-plugin-openwakeword",
+      "model": "/home/ovos/wakeWordModels/openWakeWord/hey_ARCKK.tflite",
+      "expected_duration": 3,
+      "trigger_level": 3,
+      "sensitivity": 0.5,
+      "fallback_ww": "hey_arckk_openwakeword",
+      "listen": true
+    },
+    "hey_arckk_openwakeword": {
+      "module": "ovos-ww-plugin-openwakeword",
+      "model": "/home/ovos/wakeWordModels/openWakeWord/hey_ARCKK.onnx",
+      "listen": true
+    },
+    "hey_mycroft": { "listen": false },
+    "hey_mycroft_precise": { "listen": false },
+    "hey_mycroft_vosk": { "listen": false },
+    "hey_mycroft_pocketsphinx": { "listen": false }
   }
 }

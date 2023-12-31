@@ -1,39 +1,3 @@
-2023-12-31 13:28:38.733 - OVOS - ovos_config.models:load_local:116 - ERROR - Error loading configuration '/home/ovos/.config/mycroft/mycroft.conf'
-Traceback (most recent call last):
-  File "/home/ovos/.venv/lib/python3.11/site-packages/ovos_config/models.py", line 108, in load_local
-    config = load_commented_json(path)
-             ^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ovos/.venv/lib/python3.11/site-packages/ovos_utils/json_helper.py", line 130, in load_commented_json
-    return json.loads(uncomment_json(contents))
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/lib/python3.11/json/__init__.py", line 346, in loads
-    return _default_decoder.decode(s)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/lib/python3.11/json/decoder.py", line 337, in decode
-    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/lib/python3.11/json/decoder.py", line 353, in raw_decode
-    obj, end = self.scan_once(s, idx)
-               ^^^^^^^^^^^^^^^^^^^^^^
-json.decoder.JSONDecodeError: Expecting ',' delimiter: line 1 column 77 (char 76)
-2023-12-31 13:28:39.583 - OVOS - ovos_config.models:load_local:116 - ERROR - Error loading configuration '/home/ovos/.config/mycroft/mycroft.conf'
-Traceback (most recent call last):
-  File "/home/ovos/.venv/lib/python3.11/site-packages/ovos_config/models.py", line 108, in load_local
-    config = load_commented_json(path)
-             ^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ovos/.venv/lib/python3.11/site-packages/ovos_utils/json_helper.py", line 130, in load_commented_json
-    return json.loads(uncomment_json(contents))
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/lib/python3.11/json/__init__.py", line 346, in loads
-    return _default_decoder.decode(s)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/lib/python3.11/json/decoder.py", line 337, in decode
-    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/lib/python3.11/json/decoder.py", line 353, in raw_decode
-    obj, end = self.scan_once(s, idx)
-               ^^^^^^^^^^^^^^^^^^^^^^
-json.decoder.JSONDecodeError: Expecting ',' delimiter: line 1 column 77 (char 76)
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
 ┃ Configuration keys (Configuration: Joined)                   ┃ Value                                                                                                                                                                         ┃
 ┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
@@ -170,7 +134,7 @@ json.decoder.JSONDecodeError: Expecting ',' delimiter: line 1 column 77 (char 76
 │         expected_duration                                    │ 3                                                                                                                                                                             │
 │         trigger_level                                        │ 3                                                                                                                                                                             │
 │         sensitivity                                          │ 0.5                                                                                                                                                                           │
-│         listen                                               │ True                                                                                                                                                                          │
+│         listen                                               │ False                                                                                                                                                                         │
 │         fallback_ww                                          │ hey_mycroft_vosk                                                                                                                                                              │
 │         sound                                                │ snd/start_listening.wav                                                                                                                                                       │
 │     hey_mycroft_precise                                      │                                                                                                                                                                               │
@@ -180,13 +144,13 @@ json.decoder.JSONDecodeError: Expecting ',' delimiter: line 1 column 77 (char 76
 │         expected_duration                                    │ 3                                                                                                                                                                             │
 │         trigger_level                                        │ 3                                                                                                                                                                             │
 │         sensitivity                                          │ 0.5                                                                                                                                                                           │
-│         listen                                               │ True                                                                                                                                                                          │
+│         listen                                               │ False                                                                                                                                                                         │
 │         fallback_ww                                          │ hey_mycroft_vosk                                                                                                                                                              │
 │     hey_mycroft_vosk                                         │                                                                                                                                                                               │
 │         module                                               │ ovos-ww-plugin-vosk                                                                                                                                                           │
 │         samples                                              │ ['hey mycroft', 'hey microsoft', 'hey mike roft', 'hey minecraft']                                                                                                            │
 │         rule                                                 │ fuzzy                                                                                                                                                                         │
-│         listen                                               │ True                                                                                                                                                                          │
+│         listen                                               │ False                                                                                                                                                                         │
 │         fallback_ww                                          │ hey_mycroft_pocketsphinx                                                                                                                                                      │
 │         model_folder                                         │ /home/ovos/.local/share/vosk/vosk-model-small-en-us-0.15                                                                                                                      │
 │     hey_mycroft_pocketsphinx                                 │                                                                                                                                                                               │
@@ -194,13 +158,25 @@ json.decoder.JSONDecodeError: Expecting ',' delimiter: line 1 column 77 (char 76
 │         phonemes                                             │ HH EY . M AY K R AO F T                                                                                                                                                       │
 │         threshold                                            │ 1e-90                                                                                                                                                                         │
 │         lang                                                 │ en-us                                                                                                                                                                         │
-│         listen                                               │ True                                                                                                                                                                          │
+│         listen                                               │ False                                                                                                                                                                         │
 │     wake_up                                                  │                                                                                                                                                                               │
 │         module                                               │ ovos-ww-plugin-pocketsphinx                                                                                                                                                   │
 │         phonemes                                             │ W EY K . AH P                                                                                                                                                                 │
 │         threshold                                            │ 1e-20                                                                                                                                                                         │
 │         lang                                                 │ en-us                                                                                                                                                                         │
 │         wakeup                                               │ True                                                                                                                                                                          │
+│     hey_arckk                                                │                                                                                                                                                                               │
+│         module                                               │ ovos-ww-plugin-openwakeword                                                                                                                                                   │
+│         model                                                │ /home/ovos/wakeWordModels/openWakeWord/hey_ARCKK.tflite                                                                                                                       │
+│         expected_duration                                    │ 3                                                                                                                                                                             │
+│         trigger_level                                        │ 3                                                                                                                                                                             │
+│         sensitivity                                          │ 0.5                                                                                                                                                                           │
+│         fallback_ww                                          │ hey_arckk_openwakeword                                                                                                                                                        │
+│         listen                                               │ True                                                                                                                                                                          │
+│     hey_arckk_openwakeword                                   │                                                                                                                                                                               │
+│         module                                               │ ovos-ww-plugin-openwakeword                                                                                                                                                   │
+│         model                                                │ /home/ovos/wakeWordModels/openWakeWord/hey_ARCKK.onnx                                                                                                                         │
+│         listen                                               │ True                                                                                                                                                                          │
 ├──────────────────────────────────────────────────────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
 │ gui                                                          │                                                                                                                                                                               │
 │     idle_display_skill                                       │ skill-ovos-homescreen.openvoiceos                                                                                                                                             │
@@ -246,7 +222,7 @@ json.decoder.JSONDecodeError: Expecting ',' delimiter: line 1 column 77 (char 76
 │     record_wake_words                                        │ False                                                                                                                                                                         │
 │     save_utterances                                          │ False                                                                                                                                                                         │
 │     wake_word_upload                                         │                                                                                                                                                                               │
-│         disable                                              │ True                                                                                                                                                                          │
+│         disable                                              │ False                                                                                                                                                                         │
 │         url                                                  │                                                                                                                                                                               │
 │     microphone                                               │                                                                                                                                                                               │
 │         module                                               │ ovos-microphone-plugin-sounddevice                                                                                                                                            │
@@ -269,7 +245,7 @@ json.decoder.JSONDecodeError: Expecting ',' delimiter: line 1 column 77 (char 76
 │     phoneme_duration                                         │ 120                                                                                                                                                                           │
 │     multiplier                                               │ 1.0                                                                                                                                                                           │
 │     energy_ratio                                             │ 1.5                                                                                                                                                                           │
-│     wake_word                                                │ hey_mycroft                                                                                                                                                                   │
+│     wake_word                                                │ hey_arckk                                                                                                                                                                     │
 │     stand_up_word                                            │ wake_up                                                                                                                                                                       │
 │     recording_timeout_with_silence                           │ 3.0                                                                                                                                                                           │
 │     instant_listen                                           │ True                                                                                                                                                                          │

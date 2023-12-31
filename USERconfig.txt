@@ -1,0 +1,18 @@
+{
+  "listener": {
+    "wake_word_upload": {
+      "disable": False
+    }
+    "wake_word": hey_ARCKK
+  }
+  "hotwords": {
+    "hey_arckk_openWakeWord": {
+      "module": "ovos-ww-plugin-openwakeword"
+      "model": "/home/ovos/wakeWordModels/openWakeWord/hey_ARCKK.tflite"
+      "expected_duration": 3
+      "trigger_level": 3
+      "sensitivity": 1
+      "listen": True
+    }
+  }
+}

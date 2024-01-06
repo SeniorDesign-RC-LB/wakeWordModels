@@ -4,10 +4,10 @@
     "ovos-stt-plugin-chromium": { "lang": "en-US" },
     "fallback_module": "ovos-stt-plugin-vosk-streaming",
     "ovos-stt-plugin-vosk-streaming": {
-      "model": "https://alphacephei.com/vosk/models/vosk-model-small-en-us-0.15.zip"
+	"model": "https://alphacephei.com/vosk/models/vosk-model-small-en-us-0.15.zip"
     },
     "ovos-stt-plugin-vosk":{
-      "model": "http://alphacephei.com/vosk/models/vosk-model-small-en-us-0.15.zip"
+	"model": "http://alphacephei.com/vosk/models/vosk-model-small-en-us-0.15.zip"
     }
   },
   "listener": {
@@ -16,22 +16,34 @@
   },
   "hotwords": {
     "hey_arckk": {
-      "module": "ovos-ww-plugin-openwakeword",
-      "model": "/home/ovos/wakeWordModels/openWakeWord/hey_ARCKK.tflite",
-      "expected_duration": 3,
-      "trigger_level": 3,
-      "sensitivity": 0.5,
-      "fallback_ww": "hey_arckk_openwakeword",
-      "listen": true
+	"module": "ovos-ww-plugin-openwakeword",
+	"models": ["/home/ovos/wakeWordModels/openWakeWord/hey_ARCKK.onnx"],
+	"inference_framework": "onnx",
+	"threshold": 0.3,
+	"listen": true,
+	"active": true,
+	"fallback_ww": "hey_arc_snowboy"
     },
-    "hey_arckk_openwakeword": {
-      "module": "ovos-ww-plugin-openwakeword",
-      "model": "/home/ovos/wakeWordModels/openWakeWord/hey_ARCKK.onnx",
-      "listen": true
+    "hey_arc_snowboy": {
+	"module": "ovos-ww-plugin-snowboy",
+	"model": {"sensitivity": 0.5, "model_path": "/home/ovos/hey_ark.pmdl"},
+	"listen": true,
+	"fallback_ww": "hey_arc_pocketsphinx"
     },
-    "hey_mycroft": { "listen": false },
-    "hey_mycroft_precise": { "listen": false },
-    "hey_mycroft_vosk": { "listen": false },
-    "hey_mycroft_pocketsphinx": { "listen": false }
+    "hey_arc_pocketsphinx": {
+	"module": "ovos-ww-plugin-pocketsphinx",
+	"phonemes": "HH EY . AA R K .",
+	"threshold": "1e-90",
+	"lang": "en-us",
+	"listen": true
+    },
+    "hey_mycroft": { 
+	"listen": false,
+	"active": false 
+    },
+    "hey_mycroft_precise": { 
+	"listen": false,
+	"active": false
+    }
   }
 }

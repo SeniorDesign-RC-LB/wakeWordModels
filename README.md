@@ -6,6 +6,5 @@ https://github.com/OpenVoiceOS/raspOVOS
     - incorrect plugin version to use nyumaya's trained model
       - https://github.com/OpenVoiceOS/ovos-ww-plugin-nyumaya
 2. Open Wake Word
-    - enabled
-    - does not seem to work
+    - works, but is inconsistent
       - https://github.com/OpenVoiceOS/ovos-ww-plugin-openWakeWord?tab=readme-ov-file

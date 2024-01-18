@@ -251,7 +251,7 @@
     // do not allow users to tamper with settings at all
     "disable_user_config": false,
     // do not allow remote backend to tamper with settings at all
-    "disable_remote_config": false,
+    "disable_remote_config": true,
     // protected keys are individual settings that can not be changed at remote/user level
     // nested dictionary keys can be defined with "key1:key2" syntax,
     // eg. {"a": {"b": True, "c": False}}

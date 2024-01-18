@@ -1,7 +1,4 @@
 {
-  "system": {
-	"disable_remote_config": True
-  },
   "stt": {
 	"module": "ovos-stt-plugin-vosk",
 	"fallback_module": "ovos-stt-plugin-server",

@@ -169,9 +169,17 @@
 │         active                                               │ False                                                                                                      │
 │     hey_arckk                                                │                                                                                                            │
 │         module                                               │ ovos-ww-plugin-openwakeword                                                                                │
+│         models                                               │ ['/home/ovos/wakeWordModels/openWakeWord/hey_ARCKK.tflite']                                                │
+│         inference_framework                                  │ tflite                                                                                                     │
+│         threshold                                            │ 0.5                                                                                                        │
+│         listen                                               │ True                                                                                                       │
+│         active                                               │ True                                                                                                       │
+│         fallback_ww                                          │ hey_arc_onnxFile                                                                                           │
+│     hey_arckk_onnxFile                                       │                                                                                                            │
+│         module                                               │ ovos-ww-plugin-openwakeword                                                                                │
 │         models                                               │ ['/home/ovos/wakeWordModels/openWakeWord/hey_ARCKK.onnx']                                                  │
 │         inference_framework                                  │ onnx                                                                                                       │
-│         threshold                                            │ 0.3                                                                                                        │
+│         threshold                                            │ 0.5                                                                                                        │
 │         listen                                               │ True                                                                                                       │
 │         active                                               │ True                                                                                                       │
 │         fallback_ww                                          │ hey_arc_pocketsphinx                                                                                       │
@@ -181,6 +189,7 @@
 │         threshold                                            │ 1e-90                                                                                                      │
 │         lang                                                 │ en-us                                                                                                      │
 │         listen                                               │ True                                                                                                       │
+│         active                                               │ True                                                                                                       │
 ├──────────────────────────────────────────────────────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
 │ gui                                                          │                                                                                                            │
 │     idle_display_skill                                       │ skill-ovos-homescreen.openvoiceos                                                                          │

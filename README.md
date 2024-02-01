@@ -8,3 +8,8 @@ https://github.com/OpenVoiceOS/raspOVOS
 2. Open Wake Word
     - works, but is inconsistent
       - https://github.com/OpenVoiceOS/ovos-ww-plugin-openWakeWord?tab=readme-ov-file
+    - Since the trained models are inconsistent and time constraints, I have decided to use a model that has been trained by someone in the OVOS community
+      - https://github.com/OpenVoiceOS/precise-lite-models/tree/master 
+3. Pocket Spinx
+    - used a website to get the wording
+      - http://www.speech.cs.cmu.edu/cgi-bin/cmudict?in=Hey+android
